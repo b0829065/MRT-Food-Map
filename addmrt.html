@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>administrator/add MRT</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="homepage is-preload">
+		<div id="page-wrapper">
+			<!-- admin -->
+			<section id="header">
+				<div class="container">
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a class="icon solid fa-home" href="index.html"><span>首頁</span></a></li>
+								<li><!--php-->
+									<a href="mrtmap.html" class="icon fa-map"><span>我的地圖</span></a>
+								</li>
+								<li><a class="icon solid fa-thumbs-up" href="recommend.html"><span>推薦餐廳</span></a></li>
+								<li><a class="icon solid fa-retweet" href="addclass.html"><span>推薦類別</span></a></li>
+							</ul>
+						</nav>
+					<!-- administrator -->
+					<header>
+						<h1><a href="administrator.html"><span>管理者介面</span></a></h1>
+                    <br /><br /><br />
+					</header>
+					<div class="panel-body">
+						<div class="col-6 col-12-small">
+							<div class="panel panel-primary">
+                                <h2>捷運站修改</h2>
+								<form action="connect_exam.php" method="post">
+                                    <div class="form-group">
+                                        <label for="">捷運站名稱</label>
+                                        <input
+                                           type="text"
+                                            class="form-control"
+                                            id="StationID"
+                                            name="StationID"
+                                        />
+                                    </div>
+                                    <br />
+                                    <div class="form-group">
+                                        <label for="">捷運縣顏色</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="LineColor"
+                                            name="LineColor"
+                                        />
+									</div>
+                                    <br />
+                                    <input type="submit" class="btn btn-primary" />
+                                </form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</body>
+</html>

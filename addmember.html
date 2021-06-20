@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>administrator/add steet</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="homepage is-preload">
+		<div id="page-wrapper">
+			<!-- admin -->
+			<section id="header">
+				<div class="container">
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a class="icon solid fa-home" href="index.html"><span>首頁</span></a></li>
+								<li><!--php-->
+									<a href="mrtmap.html" class="icon fa-map"><span>我的地圖</span></a>
+								</li>
+								<li><a class="icon solid fa-thumbs-up" href="recommend.html"><span>推薦餐廳</span></a></li>
+								<li><a class="icon solid fa-retweet" href="addclass.html"><span>推薦類別</span></a></li>
+							</ul>
+						</nav>
+					<!-- administrator -->
+					<header>
+						<h1><a href="administrator.html"><span>管理者介面</span></a></h1>
+					<br /><br /><br />
+					</header>
+					<div class="panel-body">
+
+						
+					<!-- 刪除的連結參考 
+						<?php
+						if(isset($_SESSION['success']) && $_SESSION['success'] !='')
+						{
+							echo '<h2 class="bg-primary text-white">'.$_SESSION['success'].'</h2>';
+							unset($_SESSION['status']);
+						}
+						if(isset($_SESSION['status']) && $_SESSION['status'] !='')
+						{
+							echo '<h2 class="bg-danger text-white"> '.$_SESSION['status'].'</h2>';
+							unset($_SESSION['status']);
+						}
+						?>-->
+
+						<div class="col-6 col-12-small">
+							<div class="panel panel-primary">
+								<h2>會員資料修改/刪除</h2>
+								<form action="connect_exam.php" method="post">
+                                    <div class="form-group">
+                                        <label for="">修改會員名字</label>
+                                        <input
+                                           type="text"
+                                            class="form-control"
+                                            id="StationID"
+                                            name="StationID"
+                                        />
+                                    </div>
+                                    <br />
+                                    <div class="form-group">
+                                        <label for="">修改會員密碼</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="LineColor"
+                                            name="LineColor"
+                                        />
+									</div>
+                                    <br />
+                                    <input type="submit" class="btn btn-primary"/>
+                                </form>
+								<br />
+								<form action="connect_exam.php" method="post">
+									<input type="hidden" name="delete_id" value="<? php echo $row['id'];?>">
+									<button type="submit" class="btn btn-danger">刪除會員</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</body>
+</html>
